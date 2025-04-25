@@ -27,12 +27,12 @@ O app começa com três estados principais:
 
 ### Marcar como Concluída:
 - Ao tocar em uma tarefa, ela alterna entre 🔲 (pendente) e ✅ (concluída).
-> Marcando uma tarefa como concluída:
+> Marcando uma tarefa como concluída: <br>
 ![Tarefa concluída](https://github.com/user-attachments/assets/c5b93010-1990-4579-92a9-32bc6138b6b9)
 
 ### Excluir Tarefas:
 - Remove a tarefa do array tasks sem confirmação.
-> Removendo uma tarefa:
+> Removendo uma tarefa: <br>
 ![Removendo tarefa1](https://github.com/user-attachments/assets/e0ce94b9-6a93-41ee-9816-3227aaca5f4d) <br>
 ![Removendo tarefa2](https://github.com/user-attachments/assets/3a1b81bb-9724-467f-80d9-18113947d7cd)
 
