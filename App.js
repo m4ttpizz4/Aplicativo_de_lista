@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-import { 
-  StyleSheet, 
-  View, 
-  Text, 
-  TextInput, 
-  FlatList, 
-  TouchableOpacity, 
-  Keyboard,
-  Alert 
-} from 'react-native';
+import { StyleSheet, View, Text, TextInput, FlatList, TouchableOpacity, Keyboard, Alert } from 'react-native';
 
 export default function TodoList() {
   const [task, setTask] = useState('');
@@ -17,7 +8,7 @@ export default function TodoList() {
 
   const handleAddTask = () => {
     if (task.trim() === '') {
-      Alert.alert('Error!', 'Digite uma tarefa válida.');
+      Alert.alert('Ops!', 'Digite uma tarefa válida.');
       return;
     }
 
@@ -30,7 +21,7 @@ export default function TodoList() {
       setTasks([...tasks, { text: task, completed: false }]);
     }
     setTask('');
-    Keyboard.dismiss(); 
+    Keyboard.dismiss();
   };
 
   const toggleTaskCompletion = (index) => {
@@ -45,24 +36,12 @@ export default function TodoList() {
   };
 
   const handleDeleteTask = (index) => {
-    Alert.alert(
-      'Confirmar',
-      'Tem certeza que deseja excluir esta tarefa?',
-      [
-        { text: 'Cancelar', style: 'cancel' },
-        { 
-          text: 'Excluir', 
-          onPress: () => {
-            const updatedTasks = tasks.filter((_, i) => i !== index);
-            setTasks(updatedTasks);
-            if (editIndex === index) {
-              setEditIndex(-1);
-              setTask('');
-            }
-          } 
-        }
-      ]
-    );
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+    if (editIndex === index) {
+      setEditIndex(-1);
+      setTask('');
+    }
   };
 
   return (
@@ -163,7 +142,7 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 16,
-    flexShrink: 1, 
+    flexShrink: 1,
   },
   actions: {
     flexDirection: 'row',
